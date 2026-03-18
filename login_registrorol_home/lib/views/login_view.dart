@@ -4,6 +4,7 @@ import '../viewmodels/auth_viewmodel.dart';
 import '../widgets/custom_textfield.dart';
 import '../widgets/custom_button.dart';
 import 'create_role_view.dart';
+import 'home_view.dart';
 import '../utils/validators.dart';
 
 class LoginView extends StatelessWidget {
@@ -44,15 +45,6 @@ class LoginView extends StatelessWidget {
 
                 // --- TEXTOS PEQUEÑOS --- //
                 SizedBox(height: 8),
-                Center(
-                  child: Text(
-                    ' "Inicia sesión para continuar con el paso 2" ',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Color.fromARGB(255, 0, 0, 0),
-                    ),
-                  ),
-                ),
                 Center(
                   child: Text(
                     ' "Recuerda Iniciar Sesion Con las Credenciales de la base de datos" ',
@@ -127,6 +119,27 @@ class LoginView extends StatelessWidget {
                             onPressed: () => _handleLogin(context, authVM),
                           ),
                           // --------------------------------- //
+
+                          // ---- BOTON DE REDIRECCION AL CREACION DE ROL ---- //
+                          SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text('¿QUIERES CREAR UN ROL?'),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const CreateRoleView(),
+                                    ),
+                                  );
+                                },
+                                child: const Text('CREAR ROL',style: TextStyle(color: Colors.green)),
+                              ),
+                            ],
+                          ),
+                          // ------------------------------------------------- //
                         ],
                       ),
                     );
@@ -164,7 +177,7 @@ class LoginView extends StatelessWidget {
           if (context.mounted) {
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => const CreateRoleView()),
+              MaterialPageRoute(builder: (context) => const HomeView()),
             );
           }
         }

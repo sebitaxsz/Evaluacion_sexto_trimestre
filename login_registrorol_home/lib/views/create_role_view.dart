@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_registrorol_home/views/login_view.dart';
 import 'package:provider/provider.dart';
 import '../viewmodels/role_viewmodel.dart';
 import '../widgets/custom_textfield.dart';
@@ -99,7 +100,14 @@ class _CreateRoleViewState extends State<CreateRoleView> {
                             ),
                             const SizedBox(height: 30),
 
-                            // Mensaje de éxito
+                            // --- Alerta del boton --- //
+                            Center(child: Padding(
+                              padding: const EdgeInsets.all(15),
+                              child: Text('No darle 2 veces al guardar rol ya que se buguea, solucion a futuro', style: TextStyle(fontSize: 20,backgroundColor: Colors.amber)),
+                            )),
+                            // ------------------------ // 
+
+                            // --- Mensaje de éxito --- //
                             if (roleVM.successMessage != null)
                               Container(
                                 padding: const EdgeInsets.all(12),
@@ -122,7 +130,8 @@ class _CreateRoleViewState extends State<CreateRoleView> {
                                   ],
                                 ),
                               ),
-                            
+                            //------------------------- //
+
                             //  Mensaje de error
                             if (roleVM.errorMessage != null)
                               Container(
@@ -153,8 +162,6 @@ class _CreateRoleViewState extends State<CreateRoleView> {
                               isLoading: roleVM.isLoading,
                               onPressed: () => _handleCreateRole(context, roleVM),
                             ),
-                            Center(child: Text('No darle 2 veces al guardar rol ya que se buguea, solucion a futuro', style: TextStyle(fontSize: 20),)),
-                            
                             SizedBox(height: 10),
                             
                             // Botón Continuar : Claramente solo me sirve si lo anterior es exitoso
@@ -164,8 +171,27 @@ class _CreateRoleViewState extends State<CreateRoleView> {
                                 color: Colors.green,
                                 onPressed: () => _navigateToHome(context),
                               ),
-                              
                             const SizedBox(height: 20),
+          
+                        SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text('¿Quieres volver al inicio de sesion?'),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>  LoginView(),
+                                    ),
+                                  );
+                                },
+                                child: const Text('Click aquí',style: TextStyle(color: Colors.green)),
+                              ),
+                            ],
+                          ),
+                          // ------------------------------------------------- //
                           ],
                         ),
                       ),
