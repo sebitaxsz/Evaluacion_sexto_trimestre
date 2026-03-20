@@ -3,6 +3,10 @@
 ## RECORDATORIO
 - Proyecto realizado en linux, por favor instalar dependencias necesarias, proyecto probado y totalmente funcional
 
+## RECOMENDACION
+- En las apis desinstalar e instalar las librerias: Bcrypt y Bcryptjs
+- En el proyecto flutter realizar: flutter clean y luego flutter pub get
+
 Este repositorio contiene una **API desarrollada en Node.js con MySQL** y una **aplicación desarrollada en Flutter**.
 
 ## Estructura del proyecto
