@@ -1,0 +1,26 @@
+Carpetas:
+
+Base de datos JS: En esta carpeta se encontrara toda la api funcional.
+
+db: En esta carpeta se encontrara el script para crear la base de datos
+
+login_registrorol_home: Proyecto de flutter completamente funcional
+
+
+VERSION 1.0 hace lo siguiente:
+Vista #1 = Login, despues de iniciar sesion redirecciona a la vista 2.
+
+Vista #2 = Crear Rol, despues de crear al rol redirecciona al home.
+
+Vista #3 = Home ultra basico.
+
+
+VERSION 2.0 hace lo siguiente:
+Vista #1 = Login, despues de iniciar sesion redirecciona al home, si no se inicia sesion permite ir a la vista 2
+
+Vista #2 = Crear Rol, despues de crear el rol redirecciona al home con el boton de HOME o permite crear el rol e ingresar a la vista 1
+
+Vista #3 = Home
+
+
+
