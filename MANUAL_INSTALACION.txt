@@ -1,26 +1,41 @@
-Carpetas:
+PASO 1: Iniciar XAMPP
+Ejecutar XAMPP y encender los servicios de Apache y MySQL.
 
-Base de datos JS: En esta carpeta se encontrara toda la api funcional.
+PASO 2: Base de datos
+Abrir la carpeta db.
+Dentro se encuentra el script de la base de datos, ejecutarlo en MySQL para crear la base de datos.
 
-db: En esta carpeta se encontrara el script para crear la base de datos
+PASO 3: Backend (Node.js)
+Abrir la carpeta "Base de datos JS" y luego ingresar a "api_basic".
 
-login_registrorol_home: Proyecto de flutter completamente funcional
+Dependencias:
+bcrypt, bcryptjs, cors, dotenv, express, jsonwebtoken, morgan, mysql2, nodemon.
 
+Instalar dependencias:
+npm install
 
-VERSION 1.0 hace lo siguiente:
-Vista #1 = Login, despues de iniciar sesion redirecciona a la vista 2.
+Si alguna librería presenta errores, reinstalarla ejecutando primero el uninstall y luego el install:
 
-Vista #2 = Crear Rol, despues de crear al rol redirecciona al home.
+npm uninstall bcrypt - npm install bcrypt
+npm uninstall bcryptjs - npm install bcryptjs
+npm uninstall cors - npm install cors
+npm uninstall dotenv - npm install dotenv
+npm uninstall express - npm install express
+npm uninstall jsonwebtoken - npm install jsonwebtoken
+npm uninstall morgan - npm install morgan
+npm uninstall mysql2 - npm install mysql2
+npm uninstall nodemon - npm install nodemon
 
-Vista #3 = Home ultra basico.
+Para ejecutar el backend:
+npm run dev
 
+PASO 4: Frontend (Flutter con Dart)
+Abrir la carpeta "login_registrorol_home" y abrir una terminal dentro del proyecto.
 
-VERSION 2.0 hace lo siguiente:
-Vista #1 = Login, despues de iniciar sesion redirecciona al home, si no se inicia sesion permite ir a la vista 2
+Ejecutar:
+flutter clean
+flutter pub get
 
-Vista #2 = Crear Rol, despues de crear el rol redirecciona al home con el boton de HOME o permite crear el rol e ingresar a la vista 1
-
-Vista #3 = Home
-
-
+Luego ejecutar el proyecto:
+flutter run
 
