@@ -12,22 +12,40 @@ Este repositorio contiene una **API desarrollada en Node.js con MySQL** y una **
 ## Estructura del proyecto
 
 ### Base de datos JS
-Carpeta donde se encuentran las APIs en Node.js junto con el script SQL de la base de datos.
+
+Carpeta donde se encuentran las APIs desarrolladas en Node.js.
 
 Incluye:
-- Configuración del servidor
-- Conexión a MySQL
-- Endpoints de la API
-- Script SQL de la base de datos, el ultimo cambio realizado en codigo fue cambiar el .env para conectarse a api-crud
+
+* Configuración del servidor
+* Conexión a MySQL
+* Endpoints de la API
+* Uso de variables de entorno (.env) para la conexión a la base de datos
+
+---
+
+### db
+
+Carpeta que contiene el script SQL de la base de datos.
+
+Incluye:
+
+* Script de creación de la base de datos
+* Estructura de tablas necesarias para el funcionamiento del sistema
+
+---
 
 ### login_registrorol_home
+
 Proyecto completo desarrollado en Flutter.
 
 Funcionalidades principales:
-- Login de usuario
-- Creación de roles
-- Vista Home
-- Conexión con la API 
+
+* Login de usuario
+* Creación de roles
+* Vista Home
+* Conexión con la API
+
 
 
 
